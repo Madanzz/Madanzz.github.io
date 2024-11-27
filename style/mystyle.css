@@ -1,0 +1,52 @@
+:root{
+    --primary:#044BD9;
+    
+}
+/* fonts*/
+.font-poppins{
+    font-family: "Poppins", sans-serif !important;
+}
+
+.font-archivo{
+    font-family: "Archivo", sans-serif !important;
+}
+
+/* navbar */
+.active {
+    color: var(--primary) !important; 
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* body{
+    padding-top: 6rem ;
+} */
+
+.jumbotron{
+    background-color: #96D2D9;
+    padding-top: 6rem;
+}
+
+.Project{
+    background-color: #96D2D9;
+    padding-top: 6rem;
+}
+
+.contact{
+    background-color: #96D2D9;
+    padding-top: 6rem;
+}
+
+.about{
+    padding-top: 6rem;
+}
+
+.document{
+    padding-top: 6rem;
+}
+
+.footer{
+    padding-bottom: 1rem;
+}
