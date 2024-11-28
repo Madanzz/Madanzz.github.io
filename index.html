@@ -46,7 +46,7 @@
        
       <!-- jumbotron -->
       <section class="jumbotron text-center float-left">
-        <img src="./assets/img/rama.png" alt="Hafidz" width="200" class="rounded-circle img-thumbnail">
+        <img src="./assets/img/Hadi.png" alt="Hafidz" width="200" class="rounded-circle img-thumbnail">
         <img src="./assets/img/rama.png" width="200" class="rounded-circle img-thumbnail" alt="Ramadhan">
         <img src="./assets/img/rama.png" width="200" class="rounded-circle img-thumbnail" alt="Hadi">
       <div class="container text-center mt-5 font-poppins">
@@ -153,13 +153,13 @@
           <div class="row justify-content-center">
             <div class="col-md-6">
               <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                <strong>Thanks mate!</strong> Your message is received.
+                <strong>terimakasih</strong> pesan anda sudah dikirim.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
-              <form name="Embedded">
+              <form name="Contact-embedded-form">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" name="name" />
+                  <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email </label>
@@ -169,8 +169,8 @@
                   <label for="pesan" class="form-label">Pesan</label>
                   <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                 </div>
-                <button type="submit" class="btn btn-kirim" style="background-color: #ffffff">Kirim</button>
-                <button class="btn btn-loading d-none" style="background-color: #ffffff" type="button" disabled>
+                <button type="submit" class="btn btn-kirim" style="background-color: #1a21fc">Kirim</button>
+                <button class="btn btn-loading d-none" style="background-color: #1a21fc" type="button" disabled>
                   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                   Loading...
                 </button>
@@ -191,6 +191,35 @@
           </p>
         </footer>
       <!-- footer END -->
-        
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzdbiOVhYbP0XdV5PYc6Jkf0ID8dowypxHa58iZqACmIP5qLqKTZsUN8QUw6D2tAxg8vw/exec';
+        const form = document.forms['Contact-embedded-form'];
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+        const myAlert = document.querySelector(".my-alert");
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          // ketika tombol submit di klik
+          // tampilkan tombol loading, hilang tombol kirim
+          btnLoading.classList.toggle("d-none");
+          btnKirim.classList.toggle("d-none");
+
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirrim, hilang tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+        })
+      </script>
 </body>
 </html>
