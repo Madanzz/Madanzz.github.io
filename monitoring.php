@@ -29,15 +29,26 @@
                     </h1>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col">
-                    <div class="card">
+                    <div class="kotak text-center">
                         <h2>
                             suhu
                         </h2>
                     </div>
-                </div>
-            </div>
+                    <div class="kotak text-center">
+                        <h2>
+                            kelembaban
+                        </h2>
+                    </div>
+                    <div class="kotak text-center">
+                        <h2>
+                            tekanan udara
+                        </h2>
+                    </div>
+                    <div class="kotak text-center">
+                        <h2>
+                            kualitas udara
+                        </h2>
+                    </div>
             <div class="row text-center">
                 <div class="col">
                     <p>Kembali ke Halaman <a href="index.html"> Sebelumnya</a></p>
