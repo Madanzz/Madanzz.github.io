@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Active State</title>
+  <style>
+    /* Styling untuk navbar */
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: #f4f4f4;
+    }
+    
+    li {
+      margin-right: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    /* Warna biru saat aktif */
+    .active {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li><a href="#" id="home" class="active" onclick="setActive('home')">Home</a></li>
+    <li><a href="#" id="about" onclick="setActive('about')">About</a></li>
+    <li><a href="#" id="project" onclick="setActive('project')">Project</a></li>
+    <li><a href="#" id="contact" onclick="setActive('contact')">Contact</a></li>
+  </ul>
+
+  <script>
+    function setActive(activeId) {
+      // Menghapus kelas 'active' dari semua tautan
+      const links = document.querySelectorAll('a');
+      links.forEach(link => link.classList.remove('active'));
+
+      // Menambahkan kelas 'active' ke tautan yang diklik
+      const activeLink = document.getElementById(activeId);
+      activeLink.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
