@@ -25,17 +25,16 @@
 } */
 
 .jumbotron{
-    background-color: #96D2D9;
+    background-color: #96D2D9 !important;
     padding-top: 6rem;
 }
 
 .Project{
-    background-color: #96D2D9;
+    background-color: #96D2D9 !important;
     padding-top: 6rem;
 }
 
-.contact{
-    background-color: #96D2D9;
+.Contact{
     padding-top: 6rem;
 }
 
